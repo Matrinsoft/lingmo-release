@@ -8,6 +8,7 @@ Release:        1%{?dist}
 Summary:        Lingmo OS release files
 License:        MIT
 URL:            https://lingmo.org/
+BuildArch:      noarch
 
 Source1:        os-release
 Source2:        issue
