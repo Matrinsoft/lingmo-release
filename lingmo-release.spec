@@ -21,9 +21,11 @@ Provides:       system-release = %{version}
 Provides:       system-release(%{version}) = %{version}
 
 # Replace Fedora's release files so only Lingmo OS identity is present.
-Provides:       fedora-release = %{version}
-Provides:       fedora-release-common = %{version}
-Provides:       fedora-release-identity-basic = %{version}
+# Use version 45 (matching the Fedora base) so packages with
+# "Requires: fedora-release >= 23" (e.g. systemd) resolve correctly.
+Provides:       fedora-release = 45
+Provides:       fedora-release-common = 45
+Provides:       fedora-release-identity-basic = 45
 Obsoletes:      fedora-release < 100
 Obsoletes:      fedora-release-common < 100
 Obsoletes:      fedora-release-identity-basic < 100
