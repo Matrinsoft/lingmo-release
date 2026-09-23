@@ -17,8 +17,10 @@ Source4:        LICENSE
 
 # Provide the generic "system-release" capability used by tools (e.g. lorax,
 # livecd-tools, anaconda) to detect the distribution.
-Provides:       system-release = %{version}
-Provides:       system-release(%{version}) = %{version}
+# Version 45 matches the Fedora base so "Requires: system-release >= 23"
+# (lvm2, systemd, etc.) resolve correctly.
+Provides:       system-release = 45
+Provides:       system-release(45) = 45
 
 # Replace Fedora's release files so only Lingmo OS identity is present.
 # Use version 45 (matching the Fedora base) so packages with
@@ -30,7 +32,6 @@ Obsoletes:      fedora-release < 100
 Obsoletes:      fedora-release-common < 100
 Obsoletes:      fedora-release-identity-basic < 100
 Obsoletes:      fedora-release-identity-wsl < 100
-Conflicts:      fedora-release
 
 Requires:       filesystem
 
