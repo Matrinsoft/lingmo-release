@@ -106,5 +106,5 @@ install -m 0644 %{SOURCE4} %{buildroot}%{_licensedir}/lingmo-release/LICENSE
 %{_sysconfdir}/system-release-cpe
 
 %changelog
-* Tue Sep 23 2026 Lingmo OS Team <team@lingmo.org> - 5-1
+* Wed Sep 23 2026 Lingmo OS Team <team@lingmo.org> - 5-1
 - Initial Lingmo OS release files
